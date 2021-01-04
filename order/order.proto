@@ -4,7 +4,7 @@ package leo;
 service OrderService {
     rpc PostOrder (PostOrderRequest) returns (PostOrderResponse);
     rpc ListOrderByProductId (ListOrderByProductIdRequest) returns (ListOrderByProductIdResponse);
-    rpc ListSellerByOrdererId (ListOrderBySellerIdRequest) returns (ListOrderBySellerIdResponse);
+    rpc ListOrderBySellerId (ListOrderBySellerIdRequest) returns (ListOrderBySellerIdResponse);
     rpc ListOrderByOrdererId (ListOrderByOrdererIdRequest) returns (ListOrderByOrdererIdResponse);
     rpc FindOrder (FindOrderRequest) returns (FindOrderResponse);
     rpc DeleteOrder (DeleteOrderRequest) returns (DeleteOrderResponse);
