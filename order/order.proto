@@ -4,6 +4,7 @@ package leo;
 service OrderService {
     rpc PostOrder (PostOrderRequest) returns (PostOrderResponse);
     rpc ListOrderByProductId (ListOrderByProductIdRequest) returns (ListOrderByProductIdResponse);
+    rpc ListOrderByOrdererId (ListOrderBySellerIdRequest) returns (ListOrderBySellerIdResponse);
     rpc ListOrderByOrdererId (ListOrderByOrdererIdRequest) returns (ListOrderByOrdererIdResponse);
     rpc FindOrder (FindOrderRequest) returns (FindOrderResponse);
     rpc DeleteOrder (DeleteOrderRequest) returns (DeleteOrderResponse);
@@ -27,6 +28,10 @@ message PostOrderRequest {
 }
 
 message ListOrderByProductIdRequest {
+    string productId = 1;
+}
+
+message ListOrderBySellerIdRequest {
     string sellerId = 1;
 }
 
@@ -48,6 +53,10 @@ message PostOrderResponse {
 }
 
 message ListOrderByProductIdResponse {
+    repeated Order orders = 1;
+}
+
+message ListOrderBySellerIdResponse {
     repeated Order orders = 1;
 }
 
