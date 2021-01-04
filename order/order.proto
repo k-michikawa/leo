@@ -17,8 +17,6 @@ message Order {
     string sellerId    = 4;
     int64  price       = 5;
     string productName = 6;
-    string ordererName = 7;
-    string sellerName  = 8;
     int64  createdAt   = 9;
 }
 
