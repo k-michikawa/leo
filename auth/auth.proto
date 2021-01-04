@@ -17,9 +17,9 @@ message ValidateJwtRequest {
 
 // Response Messages
 message GetJwtResponse {
-    Order token = 1;
+    string token = 1;
 }
 
 message ValidateJwtResponse {
-    Order newToken = 1;
+    string newToken = 1;
 }
